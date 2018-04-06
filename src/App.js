@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
+import { Button } from 'react-bootstrap';
+
 import './App.css';
 
 const Home = () => (
@@ -60,6 +62,7 @@ class App extends Component {
                         <Route exact path="/" component={Home} />
                         <Route path="/about" component={About} />
                         <Route path="/topics" component={Topics} />
+                        <Button>Button</Button>
                     </div>
                 </BrowserRouter>
             </div>
