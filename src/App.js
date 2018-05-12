@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
 import { Button } from 'react-bootstrap';
+import { Page1 } from './containers';
 
 import './App.css';
 
@@ -63,6 +64,9 @@ class App extends Component {
                         <Route path="/about" component={About} />
                         <Route path="/topics" component={Topics} />
                         <Button>Button</Button>
+                        <hr />
+                        <Link to="/page1">Page1</Link>
+                        <Route path="/page1" component={Page1} />
                     </div>
                 </BrowserRouter>
             </div>
