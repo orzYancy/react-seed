@@ -1,22 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
-import { Button } from 'react-bootstrap';
+import { IndexPage } from './containers';
 import { Page1 } from './containers';
 
 import './App.css';
-
-const Home = () => (
-    <div>
-        <h2>Home</h2>
-    </div>
-);
-
-const About = () => (
-    <div>
-        <h2>About</h2>
-    </div>
-);
 
 const Topics = ({ match }) => (
     <div>
@@ -54,18 +42,16 @@ class App extends Component {
             <div className="App">
                 <BrowserRouter>
                     <div>
-                        <ul>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/about">About</Link></li>
-                            <li><Link to="/topics">Topics</Link></li>
-                        </ul>
-                        <hr />
-                        <Route exact path="/" component={Home} />
-                        <Route path="/about" component={About} />
+                        <div>
+                            <Link to="/">Home</Link>
+                            &nbsp;&nbsp;
+                            <Link to="/topics">Topics</Link>
+                            &nbsp;&nbsp;
+                            <Link to="/page1">Page1</Link>
+                        </div>
+                        {/* routes */}
+                        <Route exact path="/" component={IndexPage} />
                         <Route path="/topics" component={Topics} />
-                        <Button>Button</Button>
-                        <hr />
-                        <Link to="/page1">Page1</Link>
                         <Route path="/page1" component={Page1} />
                     </div>
                 </BrowserRouter>
