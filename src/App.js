@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
 import { IndexPage } from './containers';
-import { Page1 } from './containers';
+import { ReduxTest } from './containers';
 import { RouteTest } from './containers';
 
 import './App.css';
@@ -18,12 +18,12 @@ class App extends Component {
                             &nbsp;&nbsp;
                             <Link to="/route">RouteTest</Link>
                             &nbsp;&nbsp;
-                            <Link to="/page1">Page1</Link>
+                            <Link to="/redux">ReduxTest</Link>
                         </div>
                         {/* routes */}
                         <Route exact path="/" component={IndexPage} />
                         <Route path="/route" component={RouteTest} />
-                        <Route path="/page1" component={Page1} />
+                        <Route path="/redux" component={ReduxTest} />
                     </div>
                 </BrowserRouter>
             </div>

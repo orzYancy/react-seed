@@ -2,8 +2,8 @@
 
 import IndexPage from './IndexPage/IndexPage.jsx';
 import RouteTest from './RouteTest/RouteTest.jsx';
-import Page1 from './Page1/Page1.jsx';
+import ReduxTest from './ReduxTest/ReduxTest.jsx';
 
 export { IndexPage };
 export { RouteTest };
-export { Page1 };
+export { ReduxTest };

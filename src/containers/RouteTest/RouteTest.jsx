@@ -15,7 +15,7 @@ export default class RouteTest extends React.Component {
         console.log(this.props);
         return (
             <div>
-                <div>Hello Router Test Page！！！</div>
+                <div>Hello Router Test Page！</div>
                 <Link to={`${this.props.match.url}/subRoute1`}>subRoute1</Link>
                 &nbsp;&nbsp;
                 <Link to={`${this.props.match.url}/subRoute2`}>subRoute2</Link>
