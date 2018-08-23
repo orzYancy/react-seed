@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { Router, Route, Link } from "react-router-dom";
 
-import { IndexPage } from './containers';
-import { ReduxTest } from './containers';
-import { RouteTest } from './containers';
+import history from 'browserHistory';
+
+import { IndexPage } from 'containers';
+import { ReduxTest } from 'containers';
+import { RouteTest } from 'containers';
 
 import './App.css';
 
@@ -11,7 +13,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <BrowserRouter>
+                <Router history={history}>
                     <div>
                         <div>
                             <Link to="/">Home</Link>
@@ -25,7 +27,7 @@ class App extends Component {
                         <Route path="/route" component={RouteTest} />
                         <Route path="/redux" component={ReduxTest} />
                     </div>
-                </BrowserRouter>
+                </Router>
             </div>
         );
     }

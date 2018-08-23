@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 
 import { Button } from 'react-bootstrap';
 
-import { actionCreateFunction1 } from '../../redux/reducer1';
+import { actionCreateFunction1 } from 'redux/reducer1';
 class ReduxTest extends React.Component {
     render() {
         return (
