@@ -12,7 +12,11 @@ import './index.css';
 
 import registerServiceWorker from './registerServiceWorker';
 
-const store = createStore(rootReducer);
+const store = createStore(
+    rootReducer,
+    // https://github.com/zalmoxisus/redux-devtools-extension
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 ReactDOM.render(
     <Provider store={store}>
         <App />
